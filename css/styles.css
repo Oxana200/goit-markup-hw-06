@@ -122,6 +122,7 @@ textarea {
     padding: 0;
     border: none;
     background-color: transparent;
+    margin: 0;
 }
 
 .burger-icon {
@@ -323,6 +324,16 @@ textarea {
 
 .menu-cont-current {
     color: #4d5ae5;
+}
+
+.menu-navigation-list:hover,
+.menu-navigation-list:focus {
+    color: #404bbf;
+}
+
+.menu-navigation-contacts:hover,
+.menu-navigation-contacts:focus {
+    color: #404bbf;
 }
 
 .menu-icon-links {
