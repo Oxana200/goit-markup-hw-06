@@ -240,6 +240,7 @@ textarea {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    overflow: auto;
 
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -259,7 +260,7 @@ textarea {
 
     display: flex;
     flex-direction: column;
-    width: 100%;
+    height: 100%;
 }
 
 .mobile-menu-close {
@@ -296,10 +297,6 @@ textarea {
     fill: #ffffff;
 }
 
-.mobile-menu-nav {
-    margin-bottom: 168px;
-}
-
 .menu-navigation-list {
     display: block;
     font-weight: 700;
@@ -307,6 +304,8 @@ textarea {
     line-height: 1.2;
     color: #2e2f42;
     padding-bottom: 40px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-nav-current {
@@ -319,7 +318,13 @@ textarea {
     font-size: 20px;
     line-height: 1.2;
     color: #434455;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-cont-wrap {
+    margin-top: auto;
 }
 
 .menu-cont-current {
@@ -339,13 +344,12 @@ textarea {
 .menu-icon-links {
     display: flex;
     gap: 24px;
-    padding-top: 48px;
-
 }
 
 .menu-icon-link-wrap {
     width: 40px;
     height: 40px;
+    margin-top: 48px;
 }
 
 .menu-icon-link {
@@ -388,12 +392,22 @@ textarea {
     padding-right: 52px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+        url(../images/start-mob-bckg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 1440px;
+    max-width: 375px;
     margin: 0 auto;
+}
+
+@media screen and (min-resolution: 2dppx),
+(min-resolution: 192dpi),
+(-webkit-min-device-pixel-ratio: 2) {
+    .start {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/start-mob-bckg-2x.jpg);
+    }
 }
 
 .start-container {
@@ -438,6 +452,20 @@ textarea {
     .start {
         padding-top: 112px;
         padding-bottom: 112px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/start-tab-bckg.jpg);
+        max-width: 768px;
+    }
+
+    @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+        .start {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/start-tab-bckg-2x.jpg);
+        }
     }
 
     .page-goal {
@@ -452,6 +480,20 @@ textarea {
     .start {
         padding-top: 188px;
         padding-bottom: 188px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/start-dsk-bckg.jpg);
+        max-width: 1440px;
+    }
+
+    @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (-webkit-min-device-pixel-ratio: 2) {
+        .start {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/start-dsk-bckg-2x.jpg);
+        }
     }
 
     .page-goal {
@@ -899,8 +941,6 @@ textarea {
 @media screen and (min-width: 768px) {
     .footer {
         padding-left: 108px;
-
-
     }
 
     .footer-container {
